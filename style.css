@@ -27,18 +27,8 @@ button{
     height: 40%;
 }
 .galeria{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* sempre 4 colunas */
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    padding-top: 1%;
-    background-color: gray;
-    gap: 20px;
-}
-img{
-    display: flex;
-    width: 400px;
-    height: 400px;
-    background-color: red;
+   display: column;
+   columns: 4;
+   padding: 10px;
+   background-color: blue;
 }

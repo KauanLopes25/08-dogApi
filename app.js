@@ -18,14 +18,31 @@ variavel
 ******************************** BIBLIOTECAS UTILIZADAS *************************************
 
 ********************************************************************************************/
+const botaoBuscarImagens= document.getElementById('buscar')
+
+botaoBuscarImagens.addEventListener('click',separarImagens)
+
+function separarImagens(raca){
+    const valorCampoBuscar = document.getElementById('campobuscar').value
+    document.documentElement.style.setProperty('--bg-color', cor)
+
+    const imagensRaca = buscarImagens(raca)
+    console.log(imagensRaca)
+}
 
 async function buscarImagens(raca) {
     const url = `https://dog.ceo/api/breed/${raca}/images`
     const response =  await fetch(url)
     const imagens = await response.json()
-    console.log(imagens.message)
+    console.log(imagens)
     return imagens.message
 }
 
-buscarImagens('pinscher')
+function adicionarImagens(){
+    const galeria = document.getElementById('galeria')
+    const container = document.createElement('div')
+    const imagem = document.createElement('img')
+}
 
+
+separarImagens('akita')
